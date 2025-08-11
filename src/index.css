@@ -1,0 +1,289 @@
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.line {
+  width: 100px;
+  height: 5px;
+}
+
+/*------------------------------------------------------------*/
+.nav {
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 100px;
+}
+
+.nav .logo {
+  font-weight: bolder;
+  font-size: 32px;
+  cursor: pointer;
+  margin-left: 50px;
+
+}
+
+.nav .logo a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav .nUl {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.nav .nUl a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 8px;
+}
+
+.nav .nUl a:focus {
+  background-color: #1abc9c;
+  background-color: #1abc9c;
+  border-radius: 10px;
+}
+
+
+/*---------------------------------------------------------------*/
+.footer {
+  margin: 0;
+
+}
+
+.footer .part1 {
+  background-color: #2c3e50;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  padding: 50px;
+}
+
+.footer .part1 div {
+  padding: 16px;
+  text-align: center;
+}
+
+.footer .part1 div h3 {
+  font-size: 28px;
+  padding: 0 0 8px;
+  margin: 20px 0 0;
+}
+
+.footer .part1 ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer .part1 ul li {
+  padding: 10px;
+  border: 1px white solid;
+  border-radius: 50%;
+}
+
+.footer .part1 ul li i {
+  font-weight: 400;
+}
+
+
+.footer .part1 div p {
+  margin-bottom: 16px;
+}
+
+.footer .part2 {
+  background-color: #1A252F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px;
+}
+
+.footer .part2 div {
+  padding-top: 10px;
+  margin-bottom: 16px;
+}
+
+/*----------------------------------------*/
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1abc9c;
+  color: white;
+  text-align: center;
+  min-height: 80vh;
+  margin: 0px;
+}
+
+.home img {
+  width: 250px;
+}
+
+.home h1 {
+  font-weight: bolder;
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+/*--------------------------------------------------*/
+.about {
+  background-color: #1abc9c;
+  color: white;
+  min-height: 80vh;
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about h2 {
+  margin: 20px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+
+}
+
+.about .aboutCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .aboutCon .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.about .aboutCon .text p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/*-------------------------------------------------------------*/
+.portfolio {
+  background-color: white;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.portfolio h2 {
+  margin: 20px;
+  color: #1A252F;
+  text-transform: uppercase;
+  font-weight: bolder;
+
+}
+
+.portfolio .photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+}
+
+.portfolio img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.portfolio .photos .layer {
+  background-color: #1abc9ce6;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s opacity, 0.6s visibility;
+  cursor: pointer;
+}
+
+.portfolio .photos .position-relative:hover .layer {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*------------*/
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: rgb(26, 188, 156, 0.45);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.fullscreen-overlay img {
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px black;
+}
+
+/*-------------------------------------------------------------------*/
+.contact {
+  background-color: white;
+}
+
+.contact h2 {
+  margin: 20px;
+  color: #1A252F;
+  text-transform: uppercase;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.contact .contactForm .form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.contact .contactForm button {
+  background-color: #1abc9c;
+  margin-bottom: 50px;
+}
+
+/*-----------------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  .nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about .aboutCon .text {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
